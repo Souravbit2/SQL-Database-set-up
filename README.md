@@ -1,8 +1,10 @@
 # SQL-Database-set-up
+
 Building an SQL Database on Azure
 This guide will walk you through the process of setting up an SQL database on Azure, configuring server-level firewall rules, connecting to your database, and creating tables within it.
 
-Step 1: Create an SQL Database on Azure
+**Step 1: Create an SQL Database on Azure**
+
 Sign in to Azure Portal: Go to portal.azure.com and sign in with your Azure account.
 
 Create a new resource: In the Azure portal, click on the "Create a resource" button (usually a green plus sign) in the left-hand navigation pane.
@@ -53,7 +55,13 @@ Review + create: Review your settings and click "Create".
 
 Deployment: Azure will now deploy your SQL server and database. This may take a few minutes. Once completed, you will see a "Deployment succeeded" message.
 
-Step 2: Create an IP Firewall Rule at the Server Level
+<img width="1842" height="784" alt="image" src="https://github.com/user-attachments/assets/af363f9a-ecfb-4f27-b797-31e598ffa019" />
+
+<img width="1827" height="407" alt="image" src="https://github.com/user-attachments/assets/b98a61db-36c8-4112-adbf-e57ad1a71820" />
+
+
+**Step 2: Create an IP Firewall Rule at the Server Level**
+
 Even if you added your current IP during creation, it's good to know how to manage firewall rules.
 
 Navigate to your SQL Server: In the Azure portal, search for and select your newly created SQL server (e.g., myazuresqlserver12345).
@@ -74,7 +82,11 @@ End IP: Enter the ending IP address of the range you want to allow. If it's a si
 
 Click "Save" at the top.
 
-Step 3: Link to the Database
+<img width="1556" height="796" alt="image" src="https://github.com/user-attachments/assets/f9285cb0-464b-44fe-8641-0e1f6c44097e" />
+
+
+**Step 3: Link to the Database**
+
 You can link to your database using various tools. SQL Server Management Studio (SSMS) is a popular choice for Windows users, while Azure Data Studio is cross-platform.
 
 Option A: Using SQL Server Management Studio (SSMS)
@@ -125,7 +137,17 @@ Database: (Optional) You can specify your database name here.
 
 Click "Connect."
 
-Step 4: Create Tables in the Database
+**Option C:THE METHOD I USED TO ACCESS THE DATABASE WITHOUT HAVING TO USE ANY APP I USED IS MENTIONED BELOW**
+Using Azure Portal Query Editor
+    Go to your Azure SQL Database in the Azure Portal.
+    Click on Query Editor (Preview).
+    Sign in with your credentials.
+    Run SQL queries directly from the browser.
+
+<img width="1899" height="691" alt="image" src="https://github.com/user-attachments/assets/bd649e00-1531-478a-b7b3-d41b7037a178" />
+
+**Step 4: Create Tables in the Database**
+
 Once connected to your database using SSMS or Azure Data Studio, you can create tables using SQL CREATE TABLE statements.
 
 Example: Creating a Customers Table
@@ -169,6 +191,8 @@ CREATE TABLE Orders (
 FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID): This line creates a relationship, ensuring that every CustomerID in the Orders table must exist in the Customers table.
 
 Execute the Query: Click "Execute."
+
+<img width="631" height="625" alt="image" src="https://github.com/user-attachments/assets/45745ed7-e4ca-437e-9891-5386c74bf0d0" />
 
 Verify Tables
 To verify that your tables have been created:
