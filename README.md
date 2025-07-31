@@ -138,11 +138,12 @@ Database: (Optional) You can specify your database name here.
 Click "Connect."
 
 **Option C:THE METHOD I USED TO ACCESS THE DATABASE WITHOUT HAVING TO USE ANY APP I USED IS MENTIONED BELOW**
+
 Using Azure Portal Query Editor
-    Go to your Azure SQL Database in the Azure Portal.
-    Click on Query Editor (Preview).
-    Sign in with your credentials.
-    Run SQL queries directly from the browser.
+Go to your Azure SQL Database in the Azure Portal.
+Click on Query Editor (Preview).
+Sign in with your credentials.
+Run SQL queries directly from the browser.
 
 <img width="1899" height="691" alt="image" src="https://github.com/user-attachments/assets/bd649e00-1531-478a-b7b3-d41b7037a178" />
 
